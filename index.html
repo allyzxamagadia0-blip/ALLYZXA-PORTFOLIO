@@ -3,22 +3,44 @@
 <head>
 <title>Allyzxa Magada - Portfolio</title>
 <style>
-body{font-family:Arial; background:#fff0f5; margin:0; color:#333; text-align:center;}
-nav{background:white; padding:15px; position:sticky; top:0;}
-nav a{margin:0 10px; color:#ff69b4; text-decoration:none; font-weight:bold; font-size:13px;}
+body{font-family:Arial; margin:0; color:white; text-align:center; overflow-x:hidden; background:#1a0033;}
+.galaxy{position:fixed; top:0; left:0; width:100%; height:100%; z-index:-2; background: linear-gradient(45deg, #2a0055, #7b2ff7, #ff1493, #ff69b4, #4b0082, #ff00ff, #2a0055); background-size:500% 500%; animation:galaxyMove 12s ease infinite;}
+@keyframes galaxyMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.nebula{position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; background: radial-gradient(circle at 20% 30%, rgba(255,20,147,0.5) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(123,47,247,0.6) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(255,105,180,0.3) 0%, transparent 60%); animation:nebulaMove 8s ease-in-out infinite alternate;}
+@keyframes nebulaMove{from{opacity:0.7; transform:scale(1)}to{opacity:1; transform:scale(1.1)}}
+.stars{position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;}
+.star{position:absolute; background:white; border-radius:50%; box-shadow:0 0 8px white, 0 0 15px #ff69b4; animation:twinkle 1.8s infinite alternate;}
+@keyframes twinkle{from{opacity:0.2; transform:scale(0.6)}to{opacity:1; transform:scale(1.4)}}
+nav{background:rgba(42,0,85,0.9); padding:15px; position:sticky; top:0; z-index:10;}
+nav a{margin:0 10px; color:#ff9ee2; text-decoration:none; font-weight:bold; font-size:13px;}
+nav b{color:white;}
 .hero{display:flex; justify-content:center; align-items:center; gap:30px; padding:40px 20px; flex-wrap:wrap;}
-.hero img{width:230px; height:280px; object-fit:cover; border-radius:15px; border:5px solid white; box-shadow:0 0 15px pink;}
-.hero-text{text-align:left; max-width:400px;}
-.hero-text h1{color:#ff69b4; margin:0;}
-.btn{background:#ff69b4; color:white; padding:10px 20px; border-radius:20px; text-decoration:none; display:inline-block; margin-top:10px;}
-.section{background:white; margin:20px; padding:30px; border-radius:20px;}
-h2{color:#ff69b4;}
+.hero img{width:230px; height:280px; object-fit:cover; border-radius:20px; border:4px solid #ff69b4; box-shadow:0 0 30px #ff1493, 0 0 60px #7b2ff7;}
+.hero-text{text-align:left; max-width:400px; background:rgba(255,255,255,0.92); color:#333; padding:25px; border-radius:25px; border:2px solid #ff69b4;}
+.hero-text h1{color:#d63384; margin:0;}
+.btn{background:linear-gradient(to right, #7b2ff7, #ff1493); color:white; padding:12px 25px; border-radius:25px; text-decoration:none; display:inline-block; margin-top:10px; font-weight:bold; box-shadow:0 0 15px #ff1493;}
+.section{background:rgba(255,255,255,0.95); color:#333; margin:20px; padding:30px; border-radius:25px; border:2px solid #c77dff;}
+h2{color:#7b2ff7;}
 .skills{display:flex; justify-content:center; gap:10px; flex-wrap:wrap;}
-.skill{background:#fff0f5; padding:15px; border-radius:15px; width:150px;}
-.box2{background:#fff0f5; padding:15px; border-radius:15px; margin:10px;}
+.skill{background:#f3e8ff; padding:15px; border-radius:15px; width:150px; border:1px solid #ff69b4;}
+.box2{background:#f3e8ff; padding:15px; border-radius:15px; margin:10px; border:1px solid #ff69b4;}
 </style>
 </head>
 <body>
+<div class="galaxy"></div>
+<div class="nebula"></div>
+<div class="stars">
+<span class="star" style="top:8%; left:15%; width:4px; height:4px;"></span>
+<span class="star" style="top:15%; left:85%; width:6px; height:6px; animation-delay:0.4s;"></span>
+<span class="star" style="top:25%; left:45%; width:5px; height:5px; animation-delay:0.8s;"></span>
+<span class="star" style="top:35%; left:10%; width:3px; height:3px;"></span>
+<span class="star" style="top:45%; left:90%; width:5px; height:5px; animation-delay:0.2s;"></span>
+<span class="star" style="top:55%; left:25%; width:6px; height:6px; animation-delay:1s;"></span>
+<span class="star" style="top:65%; left:70%; width:4px; height:4px; animation-delay:0.6s;"></span>
+<span class="star" style="top:75%; left:50%; width:5px; height:5px;"></span>
+<span class="star" style="top:85%; left:35%; width:6px; height:6px; animation-delay:0.3s;"></span>
+<span class="star" style="top:90%; left:80%; width:4px; height:4px; animation-delay:0.9s;"></span>
+</div>
 
 <nav>
 <b>♥ Allyzxa Magada</b> &nbsp;
@@ -63,11 +85,7 @@ h2{color:#ff69b4;}
 
 <div class="section" id="hobbies">
 <h2>My Hobbies & Interests</h2>
-<p>🎬 Watching K-Drama & Movies<br>
-🎨 Designing in Canva<br>
-🎵 Listening to Music<br>
-✏️ Editing Videos & Presentations<br>
-💻 Learning New Things in IT</p>
+<p>🎬 Watching K-Drama & Movies<br>🎨 Designing in Canva<br>🎵 Listening to Music<br>✏️ Editing Videos & Presentations<br>💻 Learning New Things in IT</p>
 </div>
 
 <div class="section" id="contact">
@@ -77,6 +95,5 @@ h2{color:#ff69b4;}
 <a class="btn" href="mailto:allyzxamagada0@gmail.com">Contact Me</a>
 <p style="margin-top:20px;">© 2026 Allyzxa Magada | Made with 💖</p>
 </div>
-
 </body>
 </html>
